@@ -1,0 +1,38 @@
+const math = require("./maths");
+console.log(
+  "maths function Ans",
+  math.add(1, 2) + " maths function sub:",
+  math.sub(1, 2)
+);
+
+
+function add(a, b) {
+  return a + b;
+}
+function sub(a, b) {
+  return a - b;
+}
+module.exports = {
+  add,
+  sub,
+};
+
+
+"./text.txt", "hello ."const e = require("express");
+const fs = require("fs");
+
+//scy
+// fs.writeFileSync("./text.txt", "hello .");
+
+//Async
+fs.writeFile("./tex.txt", "hello it's me anmgsdgsol...", (err) => {});
+
+fs.readFile("./tex.txt", "utf-8", (err, data) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(data);
+  }
+});
+
+
