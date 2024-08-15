@@ -1,0 +1,18 @@
+const express = require("express");
+const http = require("http");
+const app = express();
+
+app.get("/", (req, res) => {
+  return res.send("Hello From Home page");
+});
+app.get("/About", (req, res) => {
+  return res.send(`Hello From ${req.query.name} About page`);
+});
+app.get("/ServerSide", (req, res) => {
+  return res.send("Hello From Server page");
+});
+
+const myServer = http.createServer(app);
+myServer.listen((PORT = 3000), function () {
+  console.log(`server running... ${PORT}`);
+});
